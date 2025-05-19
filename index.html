@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGC Result System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://crystalpng.com/wp-content/uploads/2024/10/PGC-logo.png" alt="School Logo" class="logo">
+            <h1>Punjab Group Of Colleges</h1>
+            <h2>MZG Campus</h2>
+        </header>
+        
+        <div class="exam-selector">
+            <select id="examType">
+                <option value="annual">Anual result</option>
+                <option value="midterm">Mid-Term Examination</option>
+                <option value="test">Entry Test Result</option>
+            </select>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" id="rollNo" placeholder="Enter Roll Number">
+            <button onclick="fetchResult()"><i class="fas fa-search"></i> Search Result</button>
+        </div>
+        
+        
+        <div id="errorMessage" class="error-message">
+            Roll Number not found. Please check and try again.
+        </div>
+        
+        <div id="result" class="result-container">
+            <div class="result-card" id="resultCard">
+                <!-- Result will be displayed here -->
+            </div>
+            <div class="action-buttons">
+                <button onclick="printResult()"><i class="fas fa-print"></i> Print Result</button>
+                <button onclick="downloadResult()"><i class="fas fa-download"></i> Download</button>
+            </div>
+        </div>
+<script src="script.js"></script>
+</body>
+</html>
